@@ -1,0 +1,88 @@
+EESchema Schematic File Version 4
+LIBS:ccc-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5CDBEA8F
+P 1200 2350
+F 0 "#PWR0101" H 1200 2100 50  0001 C CNN
+F 1 "GND" H 1205 2177 50  0000 C CNN
+F 2 "" H 1200 2350 50  0001 C CNN
+F 3 "" H 1200 2350 50  0001 C CNN
+	1    1200 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5CDBF11B
+P 2200 1700
+F 0 "#PWR0102" H 2200 1550 50  0001 C CNN
+F 1 "VCC" H 2217 1873 50  0000 C CNN
+F 2 "" H 2200 1700 50  0001 C CNN
+F 3 "" H 2200 1700 50  0001 C CNN
+	1    2200 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2050 2200 1700
+Wire Wire Line
+	1200 2050 1200 2350
+Wire Wire Line
+	2050 2050 2200 2050
+Wire Wire Line
+	1550 2050 1200 2050
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J1
+U 1 1 5CDBD649
+P 1750 2150
+F 0 "J1" H 1800 2467 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 1800 2376 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Horizontal" H 1750 2150 50  0001 C CNN
+F 3 "~" H 1750 2150 50  0001 C CNN
+	1    1750 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2200 2150 2    50   Input ~ 0
+RX
+Wire Wire Line
+	2050 2150 2200 2150
+Text GLabel 1450 2150 0    50   Input ~ 0
+TX
+Wire Wire Line
+	1450 2150 1550 2150
+$Comp
+L New_Library:rt9013-33 U1
+U 1 1 5CDF692A
+P 5950 3350
+F 0 "U1" H 5950 3915 50  0000 C CNN
+F 1 "rt9013-33" H 5950 3824 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 5950 3350 50  0001 C CNN
+F 3 "" H 5950 3350 50  0001 C CNN
+	1    5950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L New_Library:LTC3225 U2
+U 1 1 5CDF8D30
+P 3900 2050
+F 0 "U2" H 3900 2665 50  0000 C CNN
+F 1 "LTC3225" H 3900 2574 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-10-1EP_2x3mm_P0.5mm_EP0.64x2.4mm" H 3500 1750 50  0001 C CNN
+F 3 "" H 3500 1750 50  0001 C CNN
+	1    3900 2050
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
