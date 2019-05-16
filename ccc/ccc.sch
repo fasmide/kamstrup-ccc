@@ -599,4 +599,59 @@ Wire Wire Line
 	4400 5500 3900 5500
 Wire Wire Line
 	4400 5700 3900 5700
+$Comp
+L RF_Module:ESP32-WROOM-32 U?
+U 1 1 5CE63B00
+P 8800 4800
+F 0 "U?" H 8800 6381 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 8800 6290 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 8800 3300 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 8500 4850 50  0001 C CNN
+	1    8800 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 7950 3600 0    50   Input ~ 0
+RST
+Wire Wire Line
+	7950 3600 8200 3600
+Text GLabel 9750 4700 2    50   Input ~ 0
+RX
+Wire Wire Line
+	9750 4700 9400 4700
+Text GLabel 9750 4500 2    50   Input ~ 0
+TX
+Wire Wire Line
+	9750 4500 9700 4500
+Wire Wire Line
+	9700 4500 9700 4600
+Wire Wire Line
+	9700 4600 9400 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5CE6F95F
+P 8800 6300
+F 0 "#PWR?" H 8800 6050 50  0001 C CNN
+F 1 "GND" H 8805 6127 50  0000 C CNN
+F 2 "" H 8800 6300 50  0001 C CNN
+F 3 "" H 8800 6300 50  0001 C CNN
+	1    8800 6300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 6300 8800 6200
+Text Notes 4100 2750 0    50   ~ 0
+Default to 4.0v VSS
+Text Notes 7650 2800 0    50   ~ 0
+Default enable on logic high PGOOD
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5CE895CD
+P 5600 4450
+F 0 "J?" H 5657 4917 50  0000 C CNN
+F 1 "USB_B_Micro" H 5657 4826 50  0000 C CNN
+F 2 "" H 5750 4400 50  0001 C CNN
+F 3 "~" H 5750 4400 50  0001 C CNN
+	1    5600 4450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
