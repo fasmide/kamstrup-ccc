@@ -444,43 +444,6 @@ $EndComp
 Wire Wire Line
 	6500 2050 6500 2250
 $Comp
-L RF_Module:ESP-12E U3
-U 1 1 5CE287CF
-P 8050 5300
-F 0 "U3" H 8400 6150 50  0000 C CNN
-F 1 "ESP-12E" H 8400 6050 50  0000 C CNN
-F 2 "RF_Module:ESP-12E" H 8050 5300 50  0001 C CNN
-F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 7700 5400 50  0001 C CNN
-	1    8050 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0118
-U 1 1 5CE2AAF5
-P 8050 4150
-F 0 "#PWR0118" H 8050 4000 50  0001 C CNN
-F 1 "+3V3" H 8065 4323 50  0000 C CNN
-F 2 "" H 8050 4150 50  0001 C CNN
-F 3 "" H 8050 4150 50  0001 C CNN
-	1    8050 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 4150 8050 4500
-$Comp
-L power:GND #PWR0119
-U 1 1 5CE2C671
-P 8050 6250
-F 0 "#PWR0119" H 8050 6000 50  0001 C CNN
-F 1 "GND" H 8055 6077 50  0000 C CNN
-F 2 "" H 8050 6250 50  0001 C CNN
-F 3 "" H 8050 6250 50  0001 C CNN
-	1    8050 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 6250 8050 6000
-$Comp
 L Switch:SW_Push SW1
 U 1 1 5CE3E2B9
 P 5750 4550
@@ -554,16 +517,6 @@ Wire Wire Line
 Wire Wire Line
 	6200 4600 6200 4750
 Connection ~ 6200 4750
-Text GLabel 7450 4700 0    50   Input ~ 0
-RST
-Text GLabel 8900 5600 2    50   Input ~ 0
-KAM_RX
-Text GLabel 8900 5400 2    50   Input ~ 0
-KAM_TX
-Wire Wire Line
-	8900 5400 8650 5400
-Wire Wire Line
-	8900 5600 8800 5600
 $Comp
 L RF_Module:ESP32-WROOM-32 U4
 U 1 1 5CE63B00
@@ -617,48 +570,8 @@ Text GLabel 10850 3650 2    50   Input ~ 0
 EXT_RX
 Wire Wire Line
 	10850 3650 10600 3650
-Text GLabel 8900 5000 2    50   Input ~ 0
-EXT_TX
-Text GLabel 8900 4800 2    50   Input ~ 0
-EXT_RX
-Wire Wire Line
-	8900 4800 8650 4800
-Text GLabel 8900 4700 2    50   Input ~ 0
-GPIO0
 Text GLabel 10850 3550 2    50   Input ~ 0
 GPIO0
-Text GLabel 4850 4650 2    50   Input ~ 0
-GPIO2
-$Comp
-L Device:R R3
-U 1 1 5D15E953
-P 4700 4350
-F 0 "R3" H 4770 4396 50  0000 L CNN
-F 1 "10k" H 4770 4305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 4630 4350 50  0001 C CNN
-F 3 "~" H 4700 4350 50  0001 C CNN
-	1    4700 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0124
-U 1 1 5D15EFF7
-P 4700 3950
-F 0 "#PWR0124" H 4700 3800 50  0001 C CNN
-F 1 "+3V3" H 4715 4123 50  0000 C CNN
-F 2 "" H 4700 3950 50  0001 C CNN
-F 3 "" H 4700 3950 50  0001 C CNN
-	1    4700 3950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4700 3950 4700 4200
-Wire Wire Line
-	4700 4650 4850 4650
-Wire Wire Line
-	4700 4500 4700 4650
-Text GLabel 8900 4900 2    50   Input ~ 0
-GPIO2
 Wire Wire Line
 	5850 6450 5850 6750
 Wire Wire Line
@@ -1217,36 +1130,6 @@ Wire Wire Line
 	10600 3550 10850 3550
 Wire Wire Line
 	10600 3850 10850 3850
-Wire Wire Line
-	8650 4700 8900 4700
-Wire Wire Line
-	8650 4900 8900 4900
-Wire Wire Line
-	8650 5000 8900 5000
-$Comp
-L Device:R R8
-U 1 1 5CF0339C
-P 7000 4750
-F 0 "R8" H 6930 4704 50  0000 R CNN
-F 1 "10k" H 6930 4795 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 6930 4750 50  0001 C CNN
-F 3 "~" H 7000 4750 50  0001 C CNN
-	1    7000 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+3V3 #PWR0128
-U 1 1 5CF19961
-P 7000 4600
-F 0 "#PWR0128" H 7000 4450 50  0001 C CNN
-F 1 "+3V3" H 7015 4773 50  0000 C CNN
-F 2 "" H 7000 4600 50  0001 C CNN
-F 3 "" H 7000 4600 50  0001 C CNN
-	1    7000 4600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7000 4900 7450 4900
 $Comp
 L power:GND #PWR0129
 U 1 1 5CF21F22
@@ -1269,33 +1152,6 @@ F 3 "~" H 10750 3750 50  0001 C CNN
 	1    10750 3750
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R9
-U 1 1 5CF23172
-P 8800 5900
-F 0 "R9" H 8870 5946 50  0000 L CNN
-F 1 "10k" H 8870 5855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8730 5900 50  0001 C CNN
-F 3 "~" H 8800 5900 50  0001 C CNN
-	1    8800 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0130
-U 1 1 5CF238D7
-P 8800 6050
-F 0 "#PWR0130" H 8800 5800 50  0001 C CNN
-F 1 "GND" H 8805 5877 50  0000 C CNN
-F 2 "" H 8800 6050 50  0001 C CNN
-F 3 "" H 8800 6050 50  0001 C CNN
-	1    8800 6050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8800 5750 8800 5600
-Connection ~ 8800 5600
-Wire Wire Line
-	8800 5600 8650 5600
 $Comp
 L Connector:Conn_01x03_Male J3
 U 1 1 5CF293EE
