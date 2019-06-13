@@ -1256,4 +1256,6 @@ F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 8700 1550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8700 1050 8700 1400
+NoConn ~ 2050 2250
+NoConn ~ 1550 2250
 $EndSCHEMATC
